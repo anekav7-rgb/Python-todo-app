@@ -79,6 +79,12 @@ def task_mark(tasks):
           
     save_tasks(tasks)
 
+def search_tasks(tasks):
+    key_word=input('Enter a keyword:')
+    word= key_word.lower()
+    for i,task in enumerate(tasks,start=1):
+        if word in task['title'].lower():
+            print(f"Results found: {i}, {task['title']}")
 
 
 def delete_tasks(tasks):
@@ -115,8 +121,9 @@ while True:
     print("2.View Tasks")
     print("3.Edit Task Title")
     print("4.Mark Task as done")
-    print("5.Delete Tasks'")
-    print("6.Exit")
+    print("5.Search Tasks")
+    print("6.Delete Tasks'")
+    print("7.Exit")
 
 
 
@@ -133,27 +140,19 @@ while True:
 
     elif choice =="4":
         task_mark(tasks)
-
-    elif choice =="5":
-        delete_tasks(tasks)
+    
+    elif choice=="5":
+        search_tasks(tasks)
 
     elif choice =="6":
+        delete_tasks(tasks)
+
+    elif choice =="7":
         exit_tasks(tasks)
         break
 
     else:
         print("Invalid task number.")
-
-
-
-
-def search_tasks(tasks):
-    key_word=input('Enter a keyword:')
-    word= key_word.lower()
-    for i,task in enumerate(tasks,start=1):
-        if word in task['title'].lower():
-            print(f"Results found: {i}, {task['title']}")
-
 
 
 
