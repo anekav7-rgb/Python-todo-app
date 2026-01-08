@@ -112,8 +112,6 @@ def delete_tasks(tasks):
 def exit_tasks(tasks):
      print("Exited sucessfully..")
      
-      
-
 
 while True:
     print("\n--- TO DO LIST---")
@@ -153,7 +151,3 @@ while True:
 
     else:
         print("Invalid task number.")
-
-
-
-    
