@@ -45,6 +45,3 @@ try:
 except PermissionError:
     print("Error: Cannot write errors.log (permission issue).")
 
-
-
-

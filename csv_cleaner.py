@@ -35,4 +35,3 @@ with open(path2, "w", newline ="") as new_file:
 
     for row in cleaned_rows:
         writer.writerow(row)
-
